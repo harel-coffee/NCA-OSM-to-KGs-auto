@@ -12,7 +12,7 @@ class osm2rdf_handler(osmium.SimpleHandler):
     def __init__(self, outpath):
         osmium.SimpleHandler.__init__(self)    
         self.counts=0
-        self.fo = open(outpath, 'w')
+        self.fo = open(outpath, 'w', encoding="utf-8")
     
     def printTriple(self, s, p, o):
             print("\t".join([s, p, o, "."]), file=self.fo)
@@ -24,7 +24,7 @@ class osm2rdf_handler(osmium.SimpleHandler):
     def node(self, n):
         if not ("wikidata" in n.tags):
         #comment above line and uncomment following line for wikipedia data
-        if not ("wikipedia" in n.tags):
+        #if not ("wikipedia" in n.tags):
             return
         
      #desired format
