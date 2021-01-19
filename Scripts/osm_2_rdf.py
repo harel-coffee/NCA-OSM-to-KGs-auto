@@ -22,9 +22,9 @@ class osm2rdf_handler(osmium.SimpleHandler):
         self.fo.close()
     
     def node(self, n):
-        if not ("wikidata" in n.tags):
+        #if not ("wikidata" in n.tags):
         #comment above line and uncomment following line for wikipedia data
-        #if not ("wikipedia" in n.tags):
+        if not ("wikipedia" in n.tags):
             return
         
      #desired format

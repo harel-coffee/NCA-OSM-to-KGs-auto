@@ -24,7 +24,7 @@ outputFile = sys.argv[2]
 
 
 lines = []
-with open(inputFile, "r") as a_file:
+with open(inputFile, "r", encoding = 'utf8') as a_file:
     for line in a_file:
         stripped_line = line.strip()
         lines.append(re.split(r'\t', stripped_line))
@@ -35,7 +35,7 @@ for i in range(len(lines)):
         if len(lines[i])<3:
             lines.remove(lines[i])
     except IndexError:
-        lines.remove(lines[i]) ###remove this later
+        #lines.remove(lines[i]) ###remove this later
         break
     if len(lines[i])>4:
         del lines[i][3:]
@@ -71,8 +71,8 @@ data['value'] = data['value'].str.replace('\"', '')
 data['tagKey'] = data[['key', 'value']].apply(lambda x: '='.join(x), axis=1)
 
 
-data = data[(data.key != '<http://www.w3.org/2003/01/geo/wgs84_pos#long') & (data.key != '<http://www.w3.org/2003/01/geo/wgs84_pos#Point')]
-data = data[(data.key != '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type') & (data.key != '<http://www.w3.org/2003/01/geo/wgs84_pos#lat')]
+#data = data[(data.key != '<http://www.w3.org/2003/01/geo/wgs84_pos#long') & (data.key != '<http://www.w3.org/2003/01/geo/wgs84_pos#Point')]
+#data = data[(data.key != '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type') & (data.key != '<http://www.w3.org/2003/01/geo/wgs84_pos#lat')]
 
 
 #get the data for tags and keys of OSM.
