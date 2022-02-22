@@ -20,3 +20,20 @@ Data: contains data files in compressed format.
 GroudnTruth: Contains manually annotated ground truth from 6 countries for Wikidata and DBpedia classes
 
 Scripts: Contains scripts to run NCA approach and also scripts for baselines.
+
+### Reference:
+
+If you find our work useful in your research please consider citing our paper. 
+```
+@inproceedings{dsouza2021towards,
+   title={{Towards Neural Schema Alignment for OpenStreetMap and Knowledge Graphs}},
+   author={Dsouza, Alishiba and Tempelmeier, Nicolas and Demidova, Elena},
+   booktitle={Proceedings of the 20th International Semantic Web Conference, {ISWC} 2021 },
+   series={Lecture Notes in Computer Science},
+   volume={12922},
+   pages={56--73},
+   year={2021},
+   organization={Springer},
+   doi={10.1007/978-3-030-88361-4\_4}
+}
+```
